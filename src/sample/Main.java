@@ -9,12 +9,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.MalformedURLException;
+
+
 
 public class Main extends Application {
 
@@ -73,7 +76,7 @@ public class Main extends Application {
         exit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.exit(1);
+                System.exit(0);
 
 
             }
@@ -88,9 +91,13 @@ public class Main extends Application {
         Scene scene = new Scene(player, 720, 406, Color.BLACK);
 
         primaryStage.setScene(scene);
+        primaryStage.getIcons().add(new Image("file:/Users/mattbulley/Pictures/yin.jpg"));
+        primaryStage.setTitle("Media Player");
         primaryStage.show();
 
+
     }
+
 
 
     public static void main(String[] args) {
